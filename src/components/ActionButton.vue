@@ -31,4 +31,9 @@ const props = defineProps<{
   color: inherit;
   font-weight: bold;
 }
+.dark-btn {
+  color: inherit;
+  border-color: #252525;
+  padding: 0.5em 2em;
+}
 </style>

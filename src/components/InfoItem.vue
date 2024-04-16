@@ -10,6 +10,7 @@ const props = defineProps<{
     <div class="about-text">
       <h1><slot name="header"></slot></h1>
       <p><slot name="content"></slot></p>
+      <slot name="button"></slot>
     </div>
     <img :src="props.imgUrl" alt="Фото кермачиского изделия" />
   </div>
@@ -26,6 +27,7 @@ h1 {
 }
 img {
   width: 50%;
+  height: max-content;
   margin: 0em 2em;
   border-radius: 1.5em;
 }
