@@ -17,9 +17,14 @@ const props = defineProps<{
 	font: inherit;
 	cursor: pointer;
 	outline: inherit;
-  border: 0.2em solid blue;
+  border: 0.2em solid white;
   border-radius: 3em;
   padding: 1.2em 2em;
-  
+  font-family: Helvetica, sans-serif;
+}
+.nav-btn{
+  background-color: #FFFFFF;
+  opacity: 90%;
+  border-color: none;
 }
 </style>

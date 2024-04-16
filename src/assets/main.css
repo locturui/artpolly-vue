@@ -1,0 +1,13 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+@font-face { 
+    font-family: Helvetica; 
+    src: url('/Helvetica/helvetica_regular.otf');
+}
+
+@font-face { font-family: Helvetica; 
+    font-weight: bold; 
+    src: url('/Helvetica/helvetica_bold.otf'); 
+}
