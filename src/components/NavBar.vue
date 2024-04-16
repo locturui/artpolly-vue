@@ -3,7 +3,15 @@ import ActionButton from './ActionButton.vue'
 </script>
 
 <template>
-  <ActionButton :classes="['btn', 'red']">Узнать больше</ActionButton>
+  <div class="bar">
+    <img />
+    <ActionButton :classes="['btn', 'red']">Узнать больше</ActionButton>
+  </div>
 </template>
 
-<style></style>
+<style>
+.bar {
+  display: flex;
+  flex-direction: row;
+}
+</style>
