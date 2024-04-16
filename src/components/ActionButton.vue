@@ -17,15 +17,17 @@ const props = defineProps<{
   font: inherit;
   cursor: pointer;
   outline: inherit;
-  border: 0.2em solid white;
+  border: 0.07em solid white;
   border-radius: 3em;
-  padding: 1.2em 2em;
+  padding: 1em 2em;
   font-family: Helvetica, sans-serif;
   font-size: 14;
+  color:#ffffff;
 }
 .nav-btn {
   background-color: #ffffff;
   opacity: 90%;
   border-color: none;
+  color:inherit;
 }
 </style>
