@@ -24,6 +24,9 @@ import { RouterLink, RouterView } from 'vue-router'
 
 <style>
 .bar {
+  position: fixed;
+  left: 50%;
+  transform: translate(-50%);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
