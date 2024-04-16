@@ -1,18 +1,16 @@
 <template>
   <main class="home-wrapper">
     <MainItem></MainItem>
-    <AboutItem></AboutItem>
-    <IconItem>
-      <template #header>Творчество рядом</template>
-      <template #content>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </template>
-    </IconItem>
+    <NarrowSection><AboutItem /></NarrowSection>
+    <NarrowSection><InfoIcons /></NarrowSection>
   </main>
 </template>
 
 <script setup>
 import MainItem from './MainItem.vue'
+import NarrowSection from './NarrowSection.vue'
+import InfoIcons from './InfoIcons.vue'
 import AboutItem from './AboutItem.vue'
-import IconItem from './IconItem.vue'
 </script>
 
 <style scoped>
