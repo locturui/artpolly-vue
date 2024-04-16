@@ -26,6 +26,15 @@ section {
 }
 .main-text {
   margin: 4rem;
-  max-width: 55%;
+  max-width: 45%;
+  color: #fff;
+}
+
+h1 {
+  font-size: 3em;
+  margin: 0;
+}
+p {
+  padding: 0.4em 0;
 }
 </style>

@@ -22,12 +22,13 @@ const props = defineProps<{
   padding: 1em 2em;
   font-family: Helvetica, sans-serif;
   font-size: 14;
-  color:#ffffff;
+  color: #ffffff;
 }
 .nav-btn {
   background-color: #ffffff;
   opacity: 90%;
   border-color: none;
-  color:inherit;
+  color: inherit;
+  font-weight: bold;
 }
 </style>

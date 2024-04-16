@@ -1,6 +1,9 @@
 <script setup lang="ts">
 import ActionButton from './ActionButton.vue'
 import { RouterLink, RouterView } from 'vue-router'
+const btnClick = () => {
+  alert('modal')
+}
 </script>
 
 <template>
@@ -12,13 +15,13 @@ import { RouterLink, RouterView } from 'vue-router'
       </div>
     </RouterLink>
     <ul>
-      <li>Мастерклассы</li>
-      <li>Расписание</li>
-      <li>Контакты</li>
-      <li>Услуги</li>
-      <li>Наша продукция</li>
+      <li><RouterLink to="/classes">Мастерклассы</RouterLink></li>
+      <li><RouterLink to="/schedule">Расписание</RouterLink></li>
+      <li><RouterLink to="/contacts">Контакты</RouterLink></li>
+      <li><RouterLink to="/offering">Услуги</RouterLink></li>
+      <li><RouterLink to="/shop">Наша продукция</RouterLink></li>
     </ul>
-    <ActionButton :classes="['btn', 'nav-btn']">Узнать больше</ActionButton>
+    <ActionButton :classes="['btn', 'nav-btn']" @click="btnClick">Узнать больше</ActionButton>
   </div>
 </template>
 
