@@ -1,13 +1,21 @@
-body{
-    margin: 0;
-    padding: 0;
+body {
+  margin: 0;
+  padding: 0;
+  color: #252525;
+  font-size: 14;
+  font-family: Helvetica, sans-serif;
 }
-@font-face { 
-    font-family: Helvetica; 
-    src: url('/Helvetica/helvetica_regular.otf');
+a {
+  text-decoration: none;
+  color: #252525;
+}
+@font-face {
+  font-family: Helvetica;
+  src: url('/Helvetica/helvetica_regular.otf');
 }
 
-@font-face { font-family: Helvetica; 
-    font-weight: bold; 
-    src: url('/Helvetica/helvetica_bold.otf'); 
+@font-face {
+  font-family: Helvetica;
+  font-weight: bold;
+  src: url('/Helvetica/helvetica_bold.otf');
 }
