@@ -21,6 +21,7 @@ import ActionButton from './ActionButton.vue'
   flex-direction: column;
   border-collapse: separate;
   width: 24%;
+  margin: 0.4em;
 }
 .header {
   background-color: #83a165;
