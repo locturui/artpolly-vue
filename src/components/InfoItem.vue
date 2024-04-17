@@ -8,7 +8,7 @@ const props = defineProps<{
 <template>
   <div class="about" :class="props.classes.join(' ')">
     <div class="about-text">
-      <h1><slot name="header"></slot></h1>
+      <h2><slot name="header"></slot></h2>
       <p><slot name="content"></slot></p>
       <slot name="button"></slot>
     </div>
@@ -21,8 +21,7 @@ const props = defineProps<{
   display: flex;
   flex-direction: row;
 }
-h1 {
-  font-size: 2.5em;
+h2 {
   margin: 0;
 }
 img {

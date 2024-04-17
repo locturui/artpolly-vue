@@ -19,7 +19,7 @@ const props = defineProps<{
   outline: inherit;
   border: 0.07em solid white;
   border-radius: 3em;
-  padding: 1em 2em;
+  padding: 0.7em 1.2em;
   font-family: Helvetica, sans-serif;
   font-size: 14;
   color: #ffffff;
@@ -34,6 +34,10 @@ const props = defineProps<{
 .dark-btn {
   color: inherit;
   border-color: #252525;
-  padding: 0.5em 2em;
+}
+.green {
+  color: white;
+  background-color: #83a165;
+  border-color: none;
 }
 </style>
