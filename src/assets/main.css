@@ -3,7 +3,7 @@ body {
   padding: 0;
   color: #252525;
   font-size: 14px;
-  font-family: Helvetica, sans-serif;
+  font-family: Arial, sans-serif;
 }
 h2 {
   font-size: 2.7em;
@@ -14,14 +14,4 @@ h1 {
 a {
   text-decoration: none;
   color: #252525;
-}
-@font-face {
-  font-family: Helvetica;
-  src: url('/Helvetica/helvetica_regular.otf');
-}
-
-@font-face {
-  font-family: Helvetica;
-  font-weight: bold;
-  src: url('/Helvetica/helvetica_bold.otf');
 }
