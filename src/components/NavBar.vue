@@ -36,7 +36,7 @@ const btnClick = () => {
   background-color: #ffd0d4;
   opacity: 80%;
   padding: 0.5em;
-  width: 75%;
+  width: 70%;
   margin: 1em auto;
   border-radius: 3em;
 }
@@ -55,12 +55,13 @@ ul {
   margin: 0;
   padding: 0;
   list-style-type: none;
+  width: 50%;
   display: flex;
   align-items: center;
+  justify-content: space-around;
 }
 
 li {
-  padding: 0 1em;
 }
 
 span {
