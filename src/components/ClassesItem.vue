@@ -35,13 +35,15 @@ const classes = [
 <template>
   <section class="bg">
     <div class="wrapper">
-      <h2>Мастер классы</h2>
-      <div class="classes-wrapper">
-        <ClassItem v-for="course of classes" :key="course.id">
-          <template #name>{{ course.name }}</template>
-          <template #price>{{ course.price }}р/час</template>
-          <template #content>{{ course.content }}</template>
-        </ClassItem>
+      <div>
+        <h2>Мастер классы</h2>
+        <div class="classes-wrapper">
+          <ClassItem v-for="course of classes" :key="course.id">
+            <template #name>{{ course.name }}</template>
+            <template #price>{{ course.price }}р/час</template>
+            <template #content>{{ course.content }}</template>
+          </ClassItem>
+        </div>
       </div>
     </div>
   </section>
@@ -60,18 +62,25 @@ const classes = [
 }
 .wrapper {
   position: absolute;
-  top: 2em;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .classes-wrapper {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: space-between;
   padding: 2rem;
 }
 h2 {
   display: block;
   width: fit-content;
   margin: auto;
-  margin-top: 4em;
 }
 </style>
