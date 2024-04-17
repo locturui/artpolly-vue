@@ -61,9 +61,6 @@ ul {
   justify-content: space-around;
 }
 
-li {
-}
-
 span {
   font-family: Helvetica, sans-serif;
   font-weight: bold;
