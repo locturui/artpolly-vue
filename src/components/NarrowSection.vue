@@ -8,8 +8,8 @@ import AboutItem from './AboutItem.vue'
 </script>
 <style scoped>
 section {
-  width: 60%;
+  width: 60% !important;
   margin: auto;
-  margin-top: 8em;
+  padding-top: 8em;
 }
 </style>

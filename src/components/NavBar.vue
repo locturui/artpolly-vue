@@ -15,7 +15,7 @@ const btnClick = () => {
       </div>
     </RouterLink>
     <ul>
-      <li><RouterLink to="/classes">Мастерклассы</RouterLink></li>
+      <li><RouterLink to="/classes">Мастер классы</RouterLink></li>
       <li><RouterLink to="/schedule">Расписание</RouterLink></li>
       <li><RouterLink to="/contacts">Контакты</RouterLink></li>
       <li><RouterLink to="/offering">Услуги</RouterLink></li>
@@ -33,12 +33,12 @@ const btnClick = () => {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  background-color: #ffd0d4;
-  opacity: 80%;
+  background-color: rgba(255, 208, 212, 0.8);
   padding: 0.5em;
   width: 70%;
   margin: 1em auto;
   border-radius: 3em;
+  z-index: 999999 !important;
 }
 .logo-wrapper {
   display: flex;

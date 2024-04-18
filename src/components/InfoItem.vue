@@ -10,7 +10,7 @@ const props = defineProps<{
     <div class="about-text">
       <h2><slot name="header"></slot></h2>
       <p><slot name="content"></slot></p>
-      <slot name="button"></slot>
+      <div class="btn"><slot name="button"></slot></div>
     </div>
     <img :src="props.imgUrl" alt="Фото кермачиского изделия" />
   </div>
@@ -33,8 +33,13 @@ img {
 .about-text {
   width: 50%;
   padding: 0em 2em;
+  display: flex;
+  flex-direction: column;
 }
 .reverse {
   flex-direction: row-reverse;
+}
+.btn {
+  margin-top: 0.5em;
 }
 </style>
