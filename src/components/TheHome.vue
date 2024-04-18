@@ -12,7 +12,7 @@ import MainItem from './MainItem.vue'
 import NarrowSection from './NarrowSection.vue'
 import InfoIcons from './InfoIcons.vue'
 import AboutItem from './AboutItem.vue'
-import ClassesSection from './ClassesItem.vue'
+import ClassesSection from './ClassesSection.vue'
 </script>
 
 <style scoped>
