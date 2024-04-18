@@ -4,6 +4,7 @@
     <NarrowSection><AboutItem /></NarrowSection>
     <NarrowSection><InfoIcons /></NarrowSection>
     <ClassesSection></ClassesSection>
+    <EventsSection></EventsSection>
   </main>
 </template>
 
@@ -13,6 +14,7 @@ import NarrowSection from './NarrowSection.vue'
 import InfoIcons from './InfoIcons.vue'
 import AboutItem from './AboutItem.vue'
 import ClassesSection from './ClassesItem.vue'
+import EventsSection from './EventsSection.vue'
 </script>
 
 <style scoped>
