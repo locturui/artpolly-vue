@@ -29,30 +29,22 @@ import EventItem from './EventItem.vue'
 <style scoped>
 .box{
     background-color: #83A165;
-    margin-top: 2.5em;
+    margin-top: 2em;
 }
-.h2{
-display: block;
-  width: fit-content;
-  margin: auto;
+h2{
   color: white;
+  text-align: center;
+  margin: 1em 0 0 0;
 }
 .events{
   display: flex;
   justify-content: space-between;
-  padding: 2rem;
+  padding: 2em;
   color: white;
 }
 
 .event-wrappers{
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-  width: 100%;
-  height: 100%;
+  
   display: flex;
   justify-content: center;
   align-items: center;
