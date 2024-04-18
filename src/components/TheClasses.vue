@@ -49,12 +49,14 @@
       </InfoItem>
     </div>
   </NarrowSection>
+  <TheFooter></TheFooter>
 </template>
 
 <script setup lang="ts">
 import InfoItem from './InfoItem.vue'
 import ActionButton from './ActionButton.vue'
 import NarrowSection from './NarrowSection.vue'
+import TheFooter from './TheFooter.vue'
 </script>
 
 <style scoped>
