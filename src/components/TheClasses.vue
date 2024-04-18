@@ -59,6 +59,6 @@ import NarrowSection from './NarrowSection.vue'
 
 <style scoped>
 .wrapper {
-  margin-bottom: 5em;
+  margin-bottom: 8em;
 }
 </style>
