@@ -3,7 +3,7 @@
         <img :src="props.imgUrl" alt="Фото иконки" />
         <h3><slot name="name"></slot></h3>
         <p><slot name="content"></slot></p>
-        <ActionButton :classes="['btn', 'white']">Регситрация</ActionButton>
+        <ActionButton :classes="['btn', 'white']">Регистрация</ActionButton>
     </div>
 </template>
 
@@ -22,6 +22,7 @@ const props = defineProps<{imgUrl: string}>()
 }
 img {
   border-radius: 1.5em;
+  width: 100%;
 }
 p {
   color: white;

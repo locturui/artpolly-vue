@@ -5,6 +5,7 @@
     <NarrowSection><InfoIcons /></NarrowSection>
     <ClassesSection></ClassesSection>
     <EventsSection></EventsSection>
+    <ContactSection></ContactSection>
     <TheFooter></TheFooter>
   </main>
 </template>
@@ -16,6 +17,7 @@ import InfoIcons from './InfoIcons.vue'
 import AboutItem from './AboutItem.vue'
 import EventsSection from './EventsSection.vue'
 import ClassesSection from './ClassesSection.vue'
+import ContactSection from './ContactSection.vue'
 import TheFooter from './TheFooter.vue'
 </script>
 
