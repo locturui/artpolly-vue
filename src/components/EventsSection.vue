@@ -7,22 +7,10 @@
       <div class="event-wrapper">
         <h2>Ближайшие события</h2>
         <div class="events">
-          <EventItem imgUrl="/image/photo_pot.jpeg">
-            <template #name>Творчество рядом</template>
-            <template #content>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </template>
-          </EventItem>
-          <EventItem imgUrl="/image/photo_pot.jpeg">
-            <template #name>Творчество рядом</template>
-            <template #content>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </template>
-          </EventItem>
-          <EventItem imgUrl="/image/photo_pot.jpeg">
-            <template #name>Творчество рядом</template>
-            <template #content>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </template>
-          </EventItem>
-          <EventItem imgUrl="/image/photo_pot.jpeg">
-            <template #name>Творчество рядом</template>
-            <template #content>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </template>
-          </EventItem>
+            <EventItem v-for="event of events" :imgUrl="event.url" :key="event.id">
+                <template #name>{{ event.name }}</template>
+                <template #content>{{event.content}} </template>
+            </EventItem>
         </div>
       </div>
     </div>
@@ -30,6 +18,33 @@
 </template>
 <script setup>
 import EventItem from './EventItem.vue'
+
+const events = [
+    {
+        id: 1,
+        url: "/image/photo_pot.jpeg",
+        name: "Творчество рядом",
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    },
+    {
+        id: 2,
+        url: "/image/photo_pot.jpeg",
+        name: "Творчество рядом",
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    },
+    {
+        id: 3,
+        url: "/image/photo_pot.jpeg",
+        name: "Творчество рядом",
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    },
+    {
+        id: 4,
+        url: "/image/photo_pot.jpeg",
+        name: "Творчество рядом",
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    }
+]
 </script>
 <style scoped>
 section {

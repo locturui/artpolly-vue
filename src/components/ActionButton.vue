@@ -44,8 +44,14 @@ const props = defineProps<{
 .white{
   font-weight: bold;
   color:white;
-  width: 75%;
+  width: fit-content;
   
 }
-
+.black{
+  font-weight: bold;
+  color:#252525;
+  border-color: #252525;
+  color: #252525;
+  width: fit-content;
+}
 </style>
