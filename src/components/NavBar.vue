@@ -17,7 +17,7 @@ const btnClick = () => {
     <ul>
       <li><RouterLink to="/classes">Мастер классы</RouterLink></li>
       <li><RouterLink to="/schedule">Расписание</RouterLink></li>
-      <li><RouterLink to="/contacts">Контакты</RouterLink></li>
+      <li><RouterLink to="/" v-scroll-to="'#contacts'">Контакты</RouterLink></li>
       <li><RouterLink to="/offering">Услуги</RouterLink></li>
       <li><RouterLink to="/shop">Наша продукция</RouterLink></li>
     </ul>

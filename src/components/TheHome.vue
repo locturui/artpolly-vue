@@ -6,7 +6,7 @@
     <ClassesSection></ClassesSection>
     <EventsSection></EventsSection>
     <MapSection></MapSection>
-    <ContactSection></ContactSection>
+    <ContactSection id="contacts"></ContactSection>
     <TheFooter></TheFooter>
   </main>
 </template>
