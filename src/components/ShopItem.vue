@@ -1,16 +1,16 @@
 <template>
-    <div class="box">
-        <img :src="props.imgUrl" alt="Фото иконки" />
-        <span><slot name="name"></slot></span>
-        <span class="price"><slot name="price"></slot></span>
-        <p><slot name="content"></slot></p>
-        <ActionButton :classes="['btn', 'black']">Купить</ActionButton>
-    </div>
+  <div class="box">
+    <img :src="props.imgUrl" alt="Фото иконки" />
+    <span><slot name="name"></slot></span>
+    <span class="price"><slot name="price"></slot></span>
+    <p><slot name="content"></slot></p>
+    <ActionButton :classes="['btn', 'black']">Купить</ActionButton>
+  </div>
 </template>
 
 <script setup lang="ts">
 import ActionButton from './ActionButton.vue'
-const props = defineProps<{imgUrl: string}>()
+const props = defineProps<{ imgUrl: string }>()
 </script>
 
 <style scoped>
@@ -19,7 +19,7 @@ const props = defineProps<{imgUrl: string}>()
   flex-direction: column;
   border-collapse: separate;
   width: 25%;
-  margin: 0.5em;
+  margin: 0.5em 0;
 }
 img {
   border-radius: 1.5em;
@@ -32,7 +32,9 @@ p {
 span {
   font-size: 1.7em;
 }
-.price{
-    opacity: 65%;
+.price {
+  margin-top: 0.5em;
+  opacity: 65%;
+  font-size: 1.5em;
 }
 </style>

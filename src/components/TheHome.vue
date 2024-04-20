@@ -4,6 +4,7 @@
     <NarrowSection><AboutItem /></NarrowSection>
     <NarrowSection><InfoIcons /></NarrowSection>
     <ClassesSection></ClassesSection>
+    <ScheduleSection></ScheduleSection>
     <EventsSection></EventsSection>
     <MapSection></MapSection>
     <ContactSection id="contacts"></ContactSection>
@@ -21,6 +22,7 @@ import ClassesSection from './ClassesSection.vue'
 import MapSection from './MapSection.vue'
 import ContactSection from './ContactSection.vue'
 import TheFooter from './TheFooter.vue'
+import ScheduleSection from './ScheduleSection.vue'
 </script>
 
 <style scoped>
