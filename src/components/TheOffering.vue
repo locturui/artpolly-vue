@@ -3,7 +3,7 @@
     <NarrowSection>
       <div class="wrapper">
         <InfoItem imgUrl="/image/photo_about.jpeg" :classes="['reverse']">
-          <template #header>Для детей</template>
+          <template #header>Коворкинг</template>
           <template #content
             >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla efficitur enim iaculis,
             ultrices nisi non, tincidunt mi. Aenean ultricies consequat ipsum sit amet porttitor.
@@ -40,7 +40,7 @@
     <div class="narrow-wrap">
       <div class="wrapper">
         <InfoItem imgUrl="/image/photo_about.jpeg" :classes="['']">
-          <template #header>Мероприятия</template>
+          <template #header>Лекторий</template>
           <template #content
             >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla efficitur enim iaculis,
             ultrices nisi non, tincidunt mi. Aenean ultricies consequat ipsum sit amet porttitor.
