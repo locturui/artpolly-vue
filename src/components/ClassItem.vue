@@ -22,6 +22,7 @@ import ActionButton from './ActionButton.vue'
   border-collapse: separate;
   width: 100%;
   margin: 0.4em;
+  text-align: start;
 }
 .header {
   background-color: #83a165;
