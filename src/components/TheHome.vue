@@ -3,9 +3,15 @@
     <MainItem></MainItem>
     <NarrowSection><AboutItem /></NarrowSection>
     <NarrowSection><InfoIcons /></NarrowSection>
-    <ClassesSection></ClassesSection>
+    <Suspense>
+      <ClassesSection></ClassesSection>
+      <template #fallback> Loading... </template>
+    </Suspense>
     <ScheduleSection></ScheduleSection>
-    <EventsSection></EventsSection>
+    <Suspense>
+      <EventsSection></EventsSection>
+      <template #fallback> Loading... </template>
+    </Suspense>
     <MapSection></MapSection>
     <ContactSection id="contacts"></ContactSection>
     <TheFooter></TheFooter>

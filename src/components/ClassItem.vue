@@ -20,7 +20,7 @@ import ActionButton from './ActionButton.vue'
   display: flex;
   flex-direction: column;
   border-collapse: separate;
-  width: 24%;
+  width: 100%;
   margin: 0.4em;
 }
 .header {

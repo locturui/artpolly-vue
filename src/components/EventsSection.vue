@@ -7,10 +7,10 @@
       <div class="event-wrapper">
         <h2>Ближайшие события</h2>
         <div class="events">
-            <EventItem v-for="event of events" :imgUrl="event.url" :key="event.id">
-                <template #name>{{ event.name }}</template>
-                <template #content>{{event.content}} </template>
-            </EventItem>
+          <EventItem v-for="event of events" :imgUrl="event.url" :key="event.id">
+            <template #name>{{ event.name }}</template>
+            <template #content>{{ event.content }} </template>
+          </EventItem>
         </div>
       </div>
     </div>
@@ -18,32 +18,35 @@
 </template>
 <script setup>
 import EventItem from './EventItem.vue'
-
+// const events = ref(null)
+const res = await fetch('http://localhost:3000/event')
+const data = await res.json()
+console.log(data)
 const events = [
-    {
-        id: 1,
-        url: "/image/photo_pot.jpeg",
-        name: "Творчество рядом",
-        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-    },
-    {
-        id: 2,
-        url: "/image/photo_pot.jpeg",
-        name: "Творчество рядом",
-        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-    },
-    {
-        id: 3,
-        url: "/image/photo_pot.jpeg",
-        name: "Творчество рядом",
-        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-    },
-    {
-        id: 4,
-        url: "/image/photo_pot.jpeg",
-        name: "Творчество рядом",
-        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-    }
+  {
+    id: 1,
+    url: '/image/photo_pot.jpeg',
+    name: 'Творчество рядом',
+    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+  },
+  {
+    id: 2,
+    url: '/image/photo_pot.jpeg',
+    name: 'Творчество рядом',
+    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+  },
+  {
+    id: 3,
+    url: '/image/photo_pot.jpeg',
+    name: 'Творчество рядом',
+    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+  },
+  {
+    id: 4,
+    url: '/image/photo_pot.jpeg',
+    name: 'Творчество рядом',
+    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+  }
 ]
 </script>
 <style scoped>

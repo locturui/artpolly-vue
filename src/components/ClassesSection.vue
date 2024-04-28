@@ -1,5 +1,30 @@
 <script setup lang="ts">
+import { ref } from 'vue'
 import ClassItem from './ClassItem.vue'
+
+interface ClassItemType {
+  id: number
+  name: string
+  price: number
+  content: string
+}
+
+const classesAPI = ref<ClassItemType[]>([])
+
+const res = await fetch('http://localhost:3000/class')
+const data = await res.json()
+for (let cat of data) {
+  for (let a_class of cat.Classes) {
+    let newClass: ClassItemType = {
+      id: a_class.ID,
+      name: a_class.Title,
+      price: a_class.Price,
+      content: a_class.Description
+    }
+    classesAPI.value.push(newClass)
+  }
+}
+
 const classes = [
   {
     id: 1,
@@ -35,10 +60,10 @@ const classes = [
 <template>
   <section class="bg">
     <div class="wrapper">
-      <div>
+      <div class="eh">
         <h2>Мастер классы</h2>
         <div class="classes-wrapper">
-          <ClassItem v-for="course of classes" :key="course.id">
+          <ClassItem v-for="course of classesAPI" :key="course.id">
             <template #name>{{ course.name }}</template>
             <template #price>{{ course.price }}р/час</template>
             <template #content>{{ course.content }}</template>
@@ -60,6 +85,9 @@ const classes = [
   padding-top: 60%;
   position: relative;
 }
+.eh {
+  width: 100%;
+}
 .wrapper {
   position: absolute;
   left: 0;
@@ -74,9 +102,10 @@ const classes = [
   align-items: center;
 }
 .classes-wrapper {
-  display: flex;
-  justify-content: space-between;
-  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2em;
+  padding: 2em;
 }
 h2 {
   display: block;
