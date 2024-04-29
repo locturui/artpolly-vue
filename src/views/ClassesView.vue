@@ -3,7 +3,7 @@ import TheClasses from '../components/TheClasses.vue'
 </script>
 
 <template>
-  <TheClasses></TheClasses>
+  <Suspense><TheClasses></TheClasses></Suspense>
 </template>
 
 <style scoped>

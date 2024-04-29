@@ -33,8 +33,8 @@ for (let cat of data) {
     <div class="wrapper">
       <div class="eh">
         <h2>Мастер классы</h2>
-        <carousel :items-to-show="4" :items-to-scroll="4">
-          <slide v-for="course of classesAPI" :key="course.id">
+        <carousel :items-to-show="4" :items-to-scroll="4" :snap-align="'start'" :wrap-around="true">
+          <slide v-for="course in classesAPI" :key="course.id">
             <ClassItem>
               <template #name>{{ course.name }}</template>
               <template #price>{{ course.price }}р/час</template>
