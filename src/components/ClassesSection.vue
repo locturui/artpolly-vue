@@ -3,6 +3,7 @@ import { ref } from 'vue'
 import ClassItem from './ClassItem.vue'
 import { Carousel, Navigation, Pagination, Slide } from 'vue3-carousel'
 import 'vue3-carousel/dist/carousel.css'
+const uri = import.meta.env.VITE_BASE_URI
 
 interface ClassItemType {
   id: number
@@ -12,8 +13,7 @@ interface ClassItemType {
 }
 
 const classesAPI = ref<ClassItemType[]>([])
-
-const res = await fetch('http://localhost:3000/class')
+const res = await fetch(uri + '/class')
 const data = await res.json()
 for (let cat of data) {
   for (let a_class of cat.Classes) {

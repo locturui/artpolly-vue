@@ -18,9 +18,9 @@ import InfoItem from './InfoItem.vue'
 import ActionButton from './ActionButton.vue'
 import NarrowSection from './NarrowSection.vue'
 import TheFooter from './TheFooter.vue'
-const res = await fetch('http://localhost:3000/class')
+const uri = import.meta.env.VITE_BASE_URI
+const res = await fetch(uri + '/class')
 const data = await res.json()
-console.log(data)
 </script>
 
 <style scoped>

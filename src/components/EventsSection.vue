@@ -18,8 +18,10 @@
 </template>
 <script setup>
 import EventItem from './EventItem.vue'
+const uri = import.meta.env.VITE_BASE_URI
+
 // const events = ref(null)
-const res = await fetch('http://localhost:3000/event')
+const res = await fetch(uri + '/event')
 const data = await res.json()
 console.log(data)
 const events = [
