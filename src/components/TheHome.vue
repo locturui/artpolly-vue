@@ -13,7 +13,7 @@
       <template #fallback> Loading... </template>
     </Suspense>
     <MapSection></MapSection>
-    <ContactSection id="contacts"></ContactSection>
+    <Suspense><ContactSection id="contacts"></ContactSection></Suspense>
     <TheFooter></TheFooter>
   </main>
 </template>

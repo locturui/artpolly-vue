@@ -17,39 +17,51 @@
   </section>
 </template>
 <script setup>
+import { reactive } from 'vue'
 import EventItem from './EventItem.vue'
 const uri = import.meta.env.VITE_BASE_URI
 
-// const events = ref(null)
+const events = reactive([])
+
 const res = await fetch(uri + '/event')
 const data = await res.json()
 console.log(data)
-const events = [
-  {
-    id: 1,
-    url: '/image/photo_pot.jpeg',
-    name: 'Творчество рядом',
-    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
-  },
-  {
-    id: 2,
-    url: '/image/photo_pot.jpeg',
-    name: 'Творчество рядом',
-    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
-  },
-  {
-    id: 3,
-    url: '/image/photo_pot.jpeg',
-    name: 'Творчество рядом',
-    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
-  },
-  {
-    id: 4,
-    url: '/image/photo_pot.jpeg',
-    name: 'Творчество рядом',
-    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+data.forEach((e) => {
+  const event = {
+    id: e.ID,
+    name: e.Title,
+    content: e.Description,
+    url: e.ImageURL
   }
-]
+  events.push(event)
+})
+
+// const events = [
+//   {
+//     id: 1,
+//     url: '/image/photo_pot.jpeg',
+//     name: 'Творчество рядом',
+//     content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+//   },
+//   {
+//     id: 2,
+//     url: '/image/photo_pot.jpeg',
+//     name: 'Творчество рядом',
+//     content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+//   },
+//   {
+//     id: 3,
+//     url: '/image/photo_pot.jpeg',
+//     name: 'Творчество рядом',
+//     content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+//   },
+//   {
+//     id: 4,
+//     url: '/image/photo_pot.jpeg',
+//     name: 'Творчество рядом',
+//     content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+//   }
+// ]
 </script>
 <style scoped>
 section {
