@@ -6,12 +6,19 @@
     <div class="box">
       <div class="event-wrapper">
         <h2>Ближайшие события</h2>
-        <div class="events">
-          <EventItem v-for="event of events" :imgUrl="event.url" :key="event.id">
-            <template #name>{{ event.name }}</template>
-            <template #content>{{ event.content }} </template>
-          </EventItem>
-        </div>
+        <carousel :items-to-show="4" :items-to-scroll="4" :snap-align="'start'" :wrap-around="true">
+          <slide v-for="event of events" :key="event.id">
+            <EventItem :imgUrl="event.url">
+              <template #name>{{ event.name }}</template>
+              <template #content>{{ event.content }} </template>
+            </EventItem>
+          </slide>
+
+          <template #addons>
+            <navigation />
+            <pagination />
+          </template>
+        </carousel>
       </div>
     </div>
   </section>
@@ -19,6 +26,8 @@
 <script setup>
 import { reactive } from 'vue'
 import EventItem from './EventItem.vue'
+import { Carousel, Navigation, Pagination, Slide } from 'vue3-carousel'
+import 'vue3-carousel/dist/carousel.css'
 const uri = import.meta.env.VITE_BASE_URI
 
 const events = reactive([])
@@ -35,33 +44,6 @@ data.forEach((e) => {
   }
   events.push(event)
 })
-
-// const events = [
-//   {
-//     id: 1,
-//     url: '/image/photo_pot.jpeg',
-//     name: 'Творчество рядом',
-//     content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
-//   },
-//   {
-//     id: 2,
-//     url: '/image/photo_pot.jpeg',
-//     name: 'Творчество рядом',
-//     content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
-//   },
-//   {
-//     id: 3,
-//     url: '/image/photo_pot.jpeg',
-//     name: 'Творчество рядом',
-//     content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
-//   },
-//   {
-//     id: 4,
-//     url: '/image/photo_pot.jpeg',
-//     name: 'Творчество рядом',
-//     content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
-//   }
-// ]
 </script>
 <style scoped>
 section {
@@ -84,6 +66,7 @@ section {
 }
 .box {
   background-color: #83a165;
+  padding-bottom: 1em;
 }
 h2 {
   color: white;
@@ -97,9 +80,7 @@ h2 {
   color: white;
 }
 
-.event-wrappers {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.event-wrapper {
+  margin: 0 1em;
 }
 </style>

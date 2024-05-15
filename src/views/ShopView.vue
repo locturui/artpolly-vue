@@ -1,8 +1,10 @@
 <script setup>
+import NavBar from '../components/NavBar.vue'
 import TheShop from '../components/TheShop.vue'
 </script>
 
 <template>
+  <NavBar />
   <TheShop></TheShop>
 </template>
 
