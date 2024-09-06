@@ -18,4 +18,6 @@
 import InfoItem from './InfoItem.vue'
 </script>
 
-<style scoped></style>
+<style scoped>
+
+</style>

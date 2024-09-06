@@ -1,8 +1,18 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
 import ClassItem from './ClassItem.vue'
 import { Carousel, Navigation, Pagination, Slide } from 'vue3-carousel'
 import 'vue3-carousel/dist/carousel.css'
+import { useWindowSize } from '@vueuse/core'
+
+const { width } = useWindowSize()
+
+const columns = computed(() => {
+  if (width.value >= 1200) return 4 // Fullscreen
+  if (width.value >= 768) return 3 // Medium screen
+  return 1 // Mobile screen
+})
+
 const uri = import.meta.env.VITE_BASE_URI
 
 interface ClassItemType {
@@ -33,7 +43,7 @@ for (let cat of data) {
     <div class="wrapper">
       <div class="eh">
         <h2>Мастер классы</h2>
-        <carousel :items-to-show="4" :items-to-scroll="4" :snap-align="'start'" :wrap-around="true">
+        <carousel :items-to-show="columns" :items-to-scroll="columns" :snap-align="'start'" :wrap-around="true">
           <slide v-for="course in classesAPI" :key="course.id">
             <ClassItem>
               <template #name>{{ course.name }}</template>
@@ -54,7 +64,7 @@ for (let cat of data) {
 
 <style scoped>
 .bg {
-  margin-top: 2.5em;
+  margin-top: 8em;
   background-image: url('/image/bg-1.svg');
   background-size: contain;
   background-repeat: no-repeat;

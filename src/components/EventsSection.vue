@@ -6,7 +6,7 @@
     <div class="box">
       <div class="event-wrapper">
         <h2>Ближайшие события</h2>
-        <carousel :items-to-show="4" :items-to-scroll="4" :snap-align="'start'" :wrap-around="true">
+        <carousel :items-to-show="columns" :items-to-scroll="columns" :snap-align="'start'" :wrap-around="true">
           <slide v-for="event of events" :key="event.id">
             <EventItem :imgUrl="event.url">
               <template #name>{{ event.name }}</template>
@@ -24,11 +24,21 @@
   </section>
 </template>
 <script setup>
-import { reactive } from 'vue'
+import { reactive, computed } from 'vue'
 import EventItem from './EventItem.vue'
 import { Carousel, Navigation, Pagination, Slide } from 'vue3-carousel'
 import 'vue3-carousel/dist/carousel.css'
+import { useWindowSize } from '@vueuse/core'
+
 const uri = import.meta.env.VITE_BASE_URI
+
+const { width } = useWindowSize()
+
+const columns = computed(() => {
+  if (width.value >= 1200) return 4 // Fullscreen
+  if (width.value >= 768) return 3 // Medium screen
+  return 1 // Mobile screen
+})
 
 const events = reactive([])
 
