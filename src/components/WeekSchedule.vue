@@ -27,6 +27,12 @@ import { Carousel, Pagination, Slide } from 'vue3-carousel'
 import 'vue3-carousel/dist/carousel.css'
 import DaySchedule from './DaySchedule.vue'
 
+const uri = import.meta.env.VITE_BASE_URI
+
+const res = await fetch(uri + '/schedule')
+const schedule = await res.json()
+console.log(schedule)
+
 // Get the window size to detect mobile
 const { width } = useWindowSize()
 const isMobile = computed(() => width.value < 768)

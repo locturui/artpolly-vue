@@ -1,7 +1,9 @@
 <template>
   <section>
     <h2>Расписание</h2>
-    <WeekSchedule></WeekSchedule>
+    <h3>Пока что нет ближайших событий</h3>
+    
+    <!-- <WeekSchedule></WeekSchedule> -->
   </section>
 </template>
 
@@ -17,6 +19,11 @@ section {
 h2 {
   text-align: center;
   margin-bottom: 2em;
+}
+
+h3 {
+  text-align: center;
+  margin-bottom: 4em;
 }
 
 @media (max-width: 768px) {

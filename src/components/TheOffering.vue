@@ -1,72 +1,71 @@
 <template>
   <section>
-    <NarrowSection>
+    <!-- Conditionally applying styles to narrow-wrap for desktop -->
+    <div class="narrow-wrap" :class="{ 'mobile-view': isMobile }">
       <div class="wrapper">
         <InfoItem imgUrl="/image/photo_about.jpeg" :classes="['reverse']">
-          <template #header>Коворкинг</template>
-          <template #content
-            >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla efficitur enim iaculis,
-            ultrices nisi non, tincidunt mi. Aenean ultricies consequat ipsum sit amet porttitor.
-            Proin laoreet diam arcu, in semper dolor pulvinar sit amet. Nam mi justo, gravida quis
-            enim ultrices, consectetur fringilla velit. Sed nec lacus maximus, dapibus neque vitae,
-            dignissim quam. Phasellus eu eros justo. Donec rutrum sem erat, commodo consequat est
-            vehicula vitae.
+          <template #header>Коворкинг/Аренда</template>
+          <template #content>
+            Вы можете арендовать помещение или снять место для своих целей Мы предоставляем комфортное рабочее место в уютной атмосфере. Для Вашего удобства в студии есть туалет и кухня с вкусным чаем, кофе и печеньками, холодильник, микроволновка и кулер. А в перерывах от работы вы можете отдохнуть, качаясь в гамаке. 
+Для записи свяжитесь с нами
           </template>
           <template #button>
-            <ActionButton :classes="['btn', 'dark-btn']">Записаться</ActionButton>
+            <ActionButton :classes="['btn', 'dark-btn']">Подробнее</ActionButton>
           </template>
         </InfoItem>
       </div>
-    </NarrowSection>
-    <div class="">
+    </div>
+
+    <!-- Image section with text -->
+    <div class="image-section">
       <div class="container">
         <div class="image-container">
           <div class="content">
-            <h1>Аренда</h1>
+            <h1>Лекторий</h1>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tempor, neque eget
-              ultrices luctus, nunc orci condimentum massa, non tempor felis quam et magna. In
-              venenatis dictum velit non convallis. Nullam mi libero, sollicitudin sit amet odio a,
-              volutpat accumsan tellus.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
-              tempor, neque eget ultrices luctus, nunc orci condimentum massa, non tempor felis quam
-              et magna. In venenatis dictum velit non convallis. Nullam mi libero, sollicitudin sit
-              amet odio a, volutpat accumsan tellus.
+              В студии периодически проходят лекции по психологии и искусству. Не пропустите интересную для вас лекцию, следите внимательно за расписанием в наших социальных сетях
             </p>
             <ActionButton :classes="['btn']">Подробнее</ActionButton>
           </div>
         </div>
       </div>
     </div>
-    <div class="narrow-wrap">
+
+    <!-- Second narrow-wrap section -->
+    <div class="narrow-wrap" :class="{ 'mobile-view': isMobile }">
       <div class="wrapper">
         <InfoItem imgUrl="/image/photo_about.jpeg" :classes="['']">
-          <template #header>Лекторий</template>
-          <template #content
-            >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla efficitur enim iaculis,
-            ultrices nisi non, tincidunt mi. Aenean ultricies consequat ipsum sit amet porttitor.
-            Proin laoreet diam arcu, in semper dolor pulvinar sit amet. Nam mi justo, gravida quis
-            enim ultrices, consectetur fringilla velit. Sed nec lacus maximus, dapibus neque vitae,
-            dignissim quam. Phasellus eu eros justo. Donec rutrum sem erat, commodo consequat est
-            vehicula vitae.
+          <template #header>Подарочные сертификаты</template>
+          <template #content>
+            Сертификат можно приобрести на любую сумму, и оплатить мастер-класс.
           </template>
           <template #button>
-            <ActionButton :classes="['btn', 'dark-btn']">Записаться</ActionButton>
+            <ActionButton :classes="['btn', 'dark-btn']">Подробнее</ActionButton>
           </template>
         </InfoItem>
       </div>
     </div>
+
     <TheFooter></TheFooter>
   </section>
 </template>
 
 <script setup lang="ts">
+import { ref, computed } from 'vue'
+import { useWindowSize } from '@vueuse/core'
 import ActionButton from './ActionButton.vue'
-import NarrowSection from './NarrowSection.vue'
 import InfoItem from './InfoItem.vue'
 import TheFooter from './TheFooter.vue'
+
+const { width } = useWindowSize()
+
+const isMobile = computed(() => width.value <= 768)
 </script>
 
 <style scoped>
+section {
+  padding-top: 6em;
+}
 .container {
   display: flex;
   align-items: center;
@@ -96,9 +95,31 @@ import TheFooter from './TheFooter.vue'
   margin-bottom: 2em;
 }
 
+/* Default narrow-wrap styling for desktop */
 .narrow-wrap {
   width: 60%;
   margin: 0 auto;
   margin-bottom: 5em;
+}
+
+/* On mobile, remove narrow-wrap specific styles */
+.mobile-view {
+  width: 100%;
+  margin: 0;
+  margin-bottom: 2em;
+}
+
+@media (max-width: 768px) {
+  .content p {
+    width: 90%;
+  }
+
+  .image-container {
+    margin: 3em 0;
+  }
+
+  .content {
+    padding: 4em 0;
+  }
 }
 </style>

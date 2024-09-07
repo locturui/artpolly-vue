@@ -33,7 +33,7 @@ const isMobile = computed(() => width.value < 768)
 
 h2 {
   margin: 0;
-  font-size: 2.7em;
+  font-size: 2.5em;
 }
 
 img {
