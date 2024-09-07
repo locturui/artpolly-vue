@@ -1,6 +1,5 @@
 <template>
   <div class="week-schedule">
-    <!-- Show the grid on larger screens -->
     <div v-if="!isMobile" class="week-grid">
       <DaySchedule
         v-for="(day, index) in weekDays"
@@ -10,7 +9,6 @@
       />
     </div>
 
-    <!-- Show the carousel on mobile screens -->
     <carousel v-else :items-to-show="columns" :items-to-scroll="columns" :snap-align="'start'" :wrap-around="true">
       <slide v-for="(day, index) in weekDays" :key="index">
         <DaySchedule :dayName="day.name" :events="day.events" />
@@ -25,7 +23,7 @@
 <script setup>
 import { reactive, computed } from 'vue'
 import { useWindowSize } from '@vueuse/core'
-import { Carousel, Navigation, Pagination, Slide } from 'vue3-carousel'
+import { Carousel, Pagination, Slide } from 'vue3-carousel'
 import 'vue3-carousel/dist/carousel.css'
 import DaySchedule from './DaySchedule.vue'
 

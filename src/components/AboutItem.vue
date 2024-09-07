@@ -2,11 +2,8 @@
   <InfoItem imgUrl="/image/photo_about.jpeg" :classes="['']">
     <template #header>О нас</template>
     <template #content
-      >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla efficitur enim iaculis,
-      ultrices nisi non, tincidunt mi. Aenean ultricies consequat ipsum sit amet porttitor. Proin
-      laoreet diam arcu, in semper dolor pulvinar sit amet. Nam mi justo, gravida quis enim
-      ultrices, consectetur fringilla velit. Sed nec lacus maximus, dapibus neque vitae, dignissim
-      quam. Phasellus eu eros justo. Donec rutrum sem erat, commodo consequat est vehicula vitae.
+      >АртПолли - студия для взрослых и детей, в которой каждый человек сможет раскрыть свой творческий потенциал, получить удовольствие от рисования и узнать, как помогать себе с помощью искусства. У нас дружелюбная среда, где комфортно людям любого возраста, и с разными возможностями здоровья. В нашей студии работают специалисты с высшим художественным и педагогическим образованиями.
+
     </template>
     <!-- <template #button>
           <ActionButton :classes="['btn', 'dark-btn']">kfldjklfj</ActionButton>

@@ -18,7 +18,7 @@
         </InfoItem>
       </div>
     </NarrowSection>
-    <div class="wrapper">
+    <div class="">
       <div class="container">
         <div class="image-container">
           <div class="content">
@@ -72,18 +72,19 @@ import TheFooter from './TheFooter.vue'
   align-items: center;
   justify-content: space-between;
   color: #fff;
+  width: 100%;
 }
 
 .image-container {
   background-image: url('/image/bg-3.jpeg');
   background-size: cover;
   clip-path: polygon(0 0, 100% 18%, 100% 89%, 0 100%);
-  width: 100%;
+  width: 100vw;
   margin: 5em 0;
 }
 
 .content {
-  width: 100%;
+  width: 100vw;
   background: rgba(154, 160, 124, 0.6);
   padding: 10em 0;
   text-align: center;

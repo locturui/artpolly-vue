@@ -45,8 +45,7 @@ h2 {
 
 .info-contact {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Two columns */
-  grid-template-rows: repeat(2, 1fr); /* Two rows */
+  grid-template-columns: repeat(2, 1fr); /* Two columns on larger screens */
   gap: 1em; /* Space between the boxes */
   max-width: 800px;
   margin: 0 auto; /* Center the grid */
@@ -84,13 +83,13 @@ ContactItem p {
 /* Mobile view adjustments */
 @media (max-width: 768px) {
   .info-contact {
-    grid-template-columns: repeat(2, 1fr); /* Still 2 columns on mobile */
-    gap: 0.5em;
+    grid-template-columns: 1fr; /* Stack items in one column on mobile */
+    gap: 1em; /* Adjust gap between the stacked items */
   }
 
   ContactItem {
-    min-height: 150px; /* Reduce size for mobile */
-    min-width: 150px; /* Ensure square-like shapes on mobile */
+    min-height: 150px; /* Adjust height for mobile */
+    min-width: 100%; /* Ensure full width on mobile */
   }
 
   h2 {
@@ -108,13 +107,13 @@ ContactItem p {
 
 @media (max-width: 480px) {
   .info-contact {
-    grid-template-columns: repeat(2, 1fr); /* Still maintain 2 columns on smaller screens */
+    grid-template-columns: 1fr; /* Keep items stacked in a single column on smaller screens */
     gap: 0.5em;
   }
 
   ContactItem {
     min-height: 120px; /* Further reduce size for smaller mobile */
-    min-width: 120px; /* Ensure square-like shapes on smaller mobile */
+    min-width: 100%; /* Ensure full width on smaller mobile */
   }
 
   h2 {
@@ -130,3 +129,4 @@ ContactItem p {
   }
 }
 </style>
+

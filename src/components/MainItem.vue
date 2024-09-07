@@ -3,8 +3,7 @@
     <div class="main-text">
       <h1>Художественная студия</h1>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla efficitur enim iaculis,
-        ultrices nisi non, tincidunt mi. Aenean ultricies consequat ipsum sit amet porttitor.
+        Откройте для себя мир творчества, ведь искусство доступно всем!
       </p>
       <ActionButton :classes="['btn']">Записаться</ActionButton>
     </div>

@@ -1,12 +1,17 @@
 <template>
-  <button :class="props.classes.join(' ')">
+  <button :class="props.classes.join(' ')" @click="openModal">
     <slot></slot>
   </button>
 </template>
-<script setup lang="ts">
-const props = defineProps<{
-  classes: string[]
-}>()
+<script setup>
+import FeedbackModal from './FeedbackModal.vue';
+const props = defineProps(['classes'])
+
+import { inject } from 'vue';
+const modal = inject('modal');
+const openModal = () => {
+  modal.openModal();
+};
 </script>
 <style scoped>
 .btn {

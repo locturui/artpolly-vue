@@ -4,7 +4,6 @@
   </div>
 </template>
 <script setup>
-import AboutItem from './AboutItem.vue'
 </script>
 <style scoped>
 div {

@@ -1,7 +1,8 @@
 <template>
   <section class="shop">
     <h2>Наша продукция</h2>
-    <h3>Категория 1</h3>
+    <h3>Пока здесь ничего нет</h3>
+    <!-- <h3>Категория 1</h3>
     <div class="wrapper">
       <ShopItem v-for="shop of shops" :imgUrl="shop.url" :key="shop.id">
         <template #name>{{ shop.name }}</template>
@@ -16,7 +17,7 @@
         <template #price>{{ shop2.price }} р.</template>
         <template #content>{{ shop2.content }} </template>
       </ShopItem>
-    </div>
+    </div> -->
   </section>
   <TheFooter></TheFooter>
 </template>
@@ -77,6 +78,9 @@ const shops2 = [
 ]
 </script>
 <style scoped>
+section {
+  min-height: 100vh;
+}
 .shop {
   padding-top: 6em;
   width: 75%;
@@ -84,6 +88,8 @@ const shops2 = [
 }
 h2 {
   text-align: center;
+  margin-bottom: 1em;
+  margin-top: 1em;
 }
 .wrapper {
   display: flex;
@@ -94,5 +100,6 @@ h2 {
 
 h3 {
   font-size: 1.5em;
+  text-align: center;
 }
 </style>

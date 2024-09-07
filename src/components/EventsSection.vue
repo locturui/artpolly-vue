@@ -35,9 +35,9 @@ const uri = import.meta.env.VITE_BASE_URI
 const { width } = useWindowSize()
 
 const columns = computed(() => {
-  if (width.value >= 1200) return 4 // Fullscreen
-  if (width.value >= 768) return 3 // Medium screen
-  return 1 // Mobile screen
+  if (width.value >= 1200) return 4 
+  if (width.value >= 768) return 3
+  return 1
 })
 
 const events = reactive([])

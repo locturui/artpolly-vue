@@ -11,32 +11,34 @@ const toggleMenu = () => {
   showMenu.value = !showMenu.value
 }
 
-// Check if the screen is mobile-sized
 const { width } = useWindowSize()
-const isMobile = computed(() => width.value < 1220)
+const isMobile = computed(() => width.value < 768)
+
+
 </script>
 
 <template>
   <div class="bar">
     <RouterLink to="/">
       <div class="logo-wrapper">
-        <div class="logo"></div>
+        <div v-if="!showMenu" class="logo"></div>
         <span>Artpolly Studio</span>
       </div>
     </RouterLink>
 
     <ul :class="{ hidden: isMobile && !showMenu }">
       <li><RouterLink to="/classes">Мастер классы</RouterLink></li>
-      <li><RouterLink to="/schedule">Расписание</RouterLink></li>
+      <!-- <li><RouterLink to="/schedule">Расписание</RouterLink></li> -->
       <li><RouterLink to="/offering">Услуги</RouterLink></li>
       <li><RouterLink to="/shop">Наша продукция</RouterLink></li>
     </ul>
 
-    <ActionButton v-if="!isMobile" :classes="['btn', 'nav-btn']" >Узнать больше</ActionButton>
+    <ActionButton v-if="!isMobile" :classes="['btn', 'nav-btn']">Узнать больше</ActionButton>
     <button v-if="isMobile" class="menu-toggle" @click="toggleMenu">
       <span class="toggle" v-if="!showMenu">☰</span>
       <span class="toggle" v-else>✕</span>
     </button>
+    
   </div>
 </template>
 
@@ -81,7 +83,11 @@ ul {
   width: 50%;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content:center
+}
+
+li {
+  margin: 0 1em;
 }
 
 span {
@@ -106,7 +112,7 @@ span {
 }
 
 /* Responsive Styling */
-@media (max-width: 1220px) {
+@media (max-width: 768px) {
   .bar {
     width: 100%;
     flex-direction: row; /* Keep in a row for better alignment */
@@ -140,7 +146,7 @@ span {
   }
 }
 
-@media (min-width: 1220px) {
+@media (min-width: 768px) {
   /* Ensure the desktop layout is maintained */
   .menu-toggle {
     display: none;

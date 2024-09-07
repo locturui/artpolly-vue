@@ -25,10 +25,10 @@
 
     <ScheduleSection></ScheduleSection>
 
-    <Suspense>
+    <!-- <Suspense>
       <EventsSection></EventsSection>
       <template #fallback> Loading... </template>
-    </Suspense>
+    </Suspense> -->
 
     <MapSection></MapSection>
 
