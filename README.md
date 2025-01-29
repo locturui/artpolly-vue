@@ -1,39 +1,59 @@
-# pr-front
+# 🏺 Artpolly Studio - Vue + Tailwind Frontend
 
-This template should help get you started developing with Vue 3 in Vite.
+Welcome to **Artpolly Studio**, a modern and elegant frontend for a ceramics studio, built with **Vue 3** and **Tailwind CSS**. This project provides an intuitive and visually appealing experience for customers to explore ceramic collections, book workshops, and contact the studio.
 
-## Recommended IDE Setup
+## 🚀 Features
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+- 🌿 **Beautiful UI** - Designed with Tailwind CSS for a clean, modern aesthetic
+- 🛍️ **Product Showcase** - Display ceramic pieces with images, descriptions, and prices
+- 📅 **Workshop Booking** - Customers can view and register for upcoming workshops
+- 📩 **Contact Form** - Easily reach out to the studio via an integrated for
 
-## Type Support for `.vue` Imports in TS
+## 🛠 Tech Stack
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+- **Vue 3** - Modern reactive framework
+- **Vite** - Fast development & hot reloading
+- **Tailwind CSS** - Utility-first styling for a sleek UI
+- **Vue Router** - Navigation between pages
+- **Pinia** - State management
 
-## Customize configuration
+## 📦 Installation
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
+Clone the repository and install dependencies:
 
 ```sh
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+## 🏗 Development
+
+Run the development server:
 
 ```sh
 npm run dev
 ```
 
-### Type-Check, Compile and Minify for Production
+Open [http://localhost:5173](http://localhost:5173) to view it in the browser.
+
+## 📦 Build for Production
 
 ```sh
 npm run build
 ```
 
-### Lint with [ESLint](https://eslint.org/)
+## 🤝 Contributing
 
-```sh
-npm run lint
-```
+1. Fork the repository
+2. Create a new branch (`git checkout -b feature-branch`)
+3. Make your changes and commit (`git commit -m "Added a new feature"`)
+4. Push to the branch (`git push origin feature-branch`)
+5. Open a pull request
+
+## 📜 License
+
+This project is licensed under the MIT License.
+
+---
+
+💙 Crafted with love for ceramic art!
+
