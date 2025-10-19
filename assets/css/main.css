@@ -1,0 +1,139 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #7A6049;
+  --color-primary-light: #9A7D68;
+  --color-primary-dark: #5E4A38;
+  
+  --color-secondary: #C49489;
+  --color-secondary-light: #D9B3A9;
+  --color-secondary-dark: #A77A70;
+  
+  --color-accent: #B89D96;
+  --color-accent-light: #D4C4BF;
+  
+  --color-sage: #897A6D;
+  --color-sage-light: #A89C90;
+  
+  --color-cream: #EBE6E1;
+  --color-cream-dark: #DFD7D0;
+  
+  --color-warm-white: #F5F2EE;
+  --color-soft-gray: #DDD8D3;
+}
+
+:root {
+  --primary: #7A6049;
+  --primary-light: #9A7D68;
+  --primary-dark: #5E4A38;
+  
+  --secondary: #C49489;
+  --secondary-light: #D9B3A9;
+  --secondary-dark: #A77A70;
+  
+  --accent: #B89D96;
+  --accent-light: #D4C4BF;
+  
+  --sage: #897A6D;
+  --sage-light: #A89C90;
+  
+  --cream: #EBE6E1;
+  --cream-dark: #DFD7D0;
+  
+  --warm-white: #F5F2EE;
+  --soft-gray: #DDD8D3;
+  
+  --text-primary: #2A251F;
+  --text-secondary: #524A40;
+  --text-muted: #7A7066;
+  
+  --success: #7A8C72;
+  --error: #B47A6A;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: var(--text-primary);
+  font-size: 15px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+  overflow-x: hidden;
+  background-color: var(--warm-white);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(2rem, 5vw, 3.5em);
+  line-height: 1.2;
+  margin: 0;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(1.8rem, 4vw, 2.7em);
+  line-height: 1.3;
+  margin: 0;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+h3 {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(1.2rem, 3vw, 1.5em);
+  line-height: 1.4;
+  margin: 0;
+  font-weight: 500;
+}
+
+p {
+  line-height: 1.7;
+  font-weight: 400;
+}
+
+button, .btn {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-primary);
+}
+
+section {
+  width: 100%;
+}
+
+.page-container {
+  min-height: 100vh;
+  padding-top: 7em;
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+  
+  .page-container {
+    padding-top: 5em;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 13px;
+  }
+}

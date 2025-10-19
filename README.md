@@ -1,59 +1,105 @@
-# 🏺 Artpolly Studio - Vue + Tailwind Frontend
+# ArtPolly - Nuxt 3 Art Studio Website
 
-Welcome to **Artpolly Studio**, a modern and elegant frontend for a ceramics studio, built with **Vue 3** and **Tailwind CSS**. This project provides an intuitive and visually appealing experience for customers to explore ceramic collections, book workshops, and contact the studio.
+A modern, responsive art studio website built with Nuxt 3, featuring classes, workshops, shop, and more.
 
-## 🚀 Features
+## ✨ Features
 
-- 🌿 **Beautiful UI** - Designed with Tailwind CSS for a clean, modern aesthetic
-- 🛍️ **Product Showcase** - Display ceramic pieces with images, descriptions, and prices
-- 📅 **Workshop Booking** - Customers can view and register for upcoming workshops
-- 📩 **Contact Form** - Easily reach out to the studio via an integrated for
+- **Built with Nuxt 3** - Composition API, file-based routing, auto-imports
+- **Built-in Nitro API** - Backend with mock data, optional external proxy
+- **Fully Responsive** - Beautiful on all devices with modern mobile nav
+- **Smooth Animations** - Carousels, transitions, hover effects
+- **Events & Schedule** - Dynamic content from API
+- **Contact Form** - Modal with form submission
+- **Tailwind CSS** - Utility-first styling
+- **TypeScript** - Full type safety
 
-## 🛠 Tech Stack
+## Quick Start
 
-- **Vue 3** - Modern reactive framework
-- **Vite** - Fast development & hot reloading
-- **Tailwind CSS** - Utility-first styling for a sleek UI
-- **Vue Router** - Navigation between pages
-- **Pinia** - State management
+```bash
+# Install dependencies
+pnpm install
 
-## 📦 Installation
+# Run development server
+pnpm dev
 
-Clone the repository and install dependencies:
+# Build for production
+pnpm build
 
-```sh
-npm install
+# Preview production
+pnpm preview
 ```
 
-## 🏗 Development
+## Pages
 
-Run the development server:
+- `/` - Home with hero, about, classes, events, schedule, contact
+- `/classes` - Detailed class information
+- `/shop` - Product categories and items
+- `/offering` - Coworking, lectures, gift certificates
+- `/schedule` - Schedule placeholder
 
-```sh
-npm run dev
+## API Endpoints
+
+Built-in Nitro API with mock data:
+
+- `GET /api/class` - Class categories
+- `GET /api/event` - Upcoming events
+- `GET /api/schedule` - Weekly schedule
+- `GET /api/contacts` - Contact information
+- `GET /api/shop` - Shop products
+- `POST /api/form` - Contact form submission
+
+## Tech Stack
+
+- **Framework**: Nuxt 3.19.3
+- **Backend**: Nitro (built-in)
+- **Styling**: Tailwind CSS 3.4
+- **Language**: TypeScript 5.4
+- **Package Manager**: pnpm 10.10
+- **Utilities**: VueUse
+- **Carousel**: vue3-carousel
+
+## Configuration
+
+### Environment Variables
+
+Optional external backend:
+
+```env
+NUXT_EXTERNAL_API_URL=
 ```
 
-Open [http://localhost:5173](http://localhost:5173) to view it in the browser.
+Leave empty to use built-in mock data.
 
-## 📦 Build for Production
+## Client-Only Components
 
-```sh
-npm run build
+Components with `.client.vue` suffix render only on client (no SSR):
+
+- `classes/section.client.vue` - Uses carousel + window sizing
+- `events/section.client.vue` - Uses carousel
+- `schedule/week-schedule.client.vue` - Uses carousel
+
+## Deployment
+
+### Build
+```bash
+pnpm build
 ```
 
-## 🤝 Contributing
+### Preview
+```bash
+pnpm preview
+```
 
-1. Fork the repository
-2. Create a new branch (`git checkout -b feature-branch`)
-3. Make your changes and commit (`git commit -m "Added a new feature"`)
-4. Push to the branch (`git push origin feature-branch`)
-5. Open a pull request
+### Deploy
+Compatible with:
+- Vercel
+- Netlify
+- Any Node.js hosting
 
-## 📜 License
+## 📄 License
 
-This project is licensed under the MIT License.
+See LICENSE.md
 
 ---
 
-💙 Crafted with love for ceramic art!
-
+Built with ❤️ using Nuxt 3
